@@ -193,8 +193,11 @@ body {
 
 .formRow {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  row-gap: 10px;
+  column-gap: 12px;
   margin-top: 2px;
 }
 
@@ -206,6 +209,7 @@ body {
   color: var(--colorMuted);
   cursor: pointer;
   user-select: none;
+  white-space: nowrap;
 }
 
 .checkboxLabel input {
