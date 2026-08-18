@@ -10,9 +10,69 @@
 
 <main class="page">
   <section class="loginCard">
-    <h1 class="title">Connexion</h1>
+
+    <div class="brand">
+      <div class="brandMark">S</div>
+      <p class="brandName">Synent</p>
+    </div>
+
+    <h1 class="title">Content de vous revoir</h1>
+    <p class="subtitle">Connectez vous pour continuer</p>
+
+    <form class="loginForm" id="loginForm" novalidate>
+
+      <div class="field">
+        <label class="fieldLabel" for="email">Adresse électronique</label>
+        <input
+          class="fieldInput"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="vous@exemple.com"
+          autocomplete="email"
+          required
+        >
+        <p class="fieldError" id="emailError">Veuillez saisir une adresse électronique valide</p>
+      </div>
+
+      <div class="field">
+        <label class="fieldLabel" for="password">Mot de passe</label>
+        <div class="passwordWrap">
+          <input
+            class="fieldInput"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Votre mot de passe"
+            autocomplete="current-password"
+            required
+          >
+          <button type="button" class="toggleVisibility" id="toggleVisibility" aria-label="Afficher le mot de passe">
+            <svg class="eyeIcon" id="eyeIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="formRow">
+        <label class="checkboxLabel">
+          <input type="checkbox" id="remember" name="remember">
+          <span>Se souvenir de moi</span>
+        </label>
+        <a href="#" class="forgotLink">Mot de passe oublié ?</a>
+      </div>
+
+      <button type="submit" class="submitButton">Se connecter</button>
+
+    </form>
+
+    <p class="signupPrompt">Pas encore de compte ? <a href="#" class="signupLink">Créer un compte</a></p>
+
   </section>
 </main>
 
+<script src="js/script.js"></script>
 </body>
 </html>
